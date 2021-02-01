@@ -17,6 +17,7 @@ var kills = 0;
 const entries = {};
 client.on('message', (channel, tags, message, self) => {
     if(self) return;
+	// use these to define who can control the bot.
     const isBotOwner = tags.username === process.env.BOT_OWNER
     const isChannelMod = tags.username === process.env.CHANNEL_MOD || process.env.CHANNEL_MOD_TWO || process.env.CHANNEL_MOD_THREE;
     const isTrustedUser = tags.username === process.env.TRUSTED_USER_ONE || process.env.TRUSTED_USER_TWO || process.env.TRUSTED_USER_THREE;
